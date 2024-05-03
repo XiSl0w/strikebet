@@ -10,26 +10,26 @@
 
     
     onMount(async () => {
-		if (!AuthActions.checkAuth()) {
-			if (currentPage !== '/login') {
-				window.location.href = '/login';
-			}
-		}
-		const response = await fetch('http://127.0.0.1:3220/users/@me', {
-            method: 'GET',
-            headers: AuthActions.getAuthHeader()
-        });
-		if (response.ok) {
-			console.log('User is logged in');
-			const user = await response.json();
-			User.set(user);
-			console.log(user);
-		} else {
-			AuthActions.clearToken();
-			if (currentPage !== '/login') {
-				window.location.href = '/login';
-			}
-		}
+		// if (!AuthActions.checkAuth()) {
+		// 	if (currentPage !== '/login') {
+		// 		window.location.href = '/login';
+		// 	}
+		// }
+		// const response = await fetch('http://127.0.0.1:3220/users/@me', {
+        //     method: 'GET',
+        //     headers: AuthActions.getAuthHeader()
+        // });
+		// if (response.ok) {
+		// 	console.log('User is logged in');
+		// 	const user = await response.json();
+		// 	User.set(user);
+		// 	console.log(user);
+		// } else {
+		// 	AuthActions.clearToken();
+		// 	if (currentPage !== '/login') {
+		// 		window.location.href = '/login';
+		// 	}
+		// }
 	});
 </script>
 
