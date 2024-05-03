@@ -1743,3 +1743,371 @@ button.icon.clear-select {
   border: 1px solid #292929;
   padding: .6rem;
 }
+
+.card-header {
+  width: 100%;
+}
+
+.league-header {
+  display: flex;
+  background: var(--accent1);
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 6px;
+  font-size: .7rem;
+  padding: .9rem 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+.league-header i {
+  margin-left: auto;
+}
+
+.live {
+  min-height: 50vh;
+}
+
+.placed {
+  transform: translate(-50%, 0);
+  left: 50%;
+  border-radius: 10px 10px 0 0;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(
+--bg3);
+  padding: 1.6rem;
+  box-shadow: 0 0 16px #00000050;
+}
+
+@media only screen and (max-width:777px){
+  nav {
+    flex-wrap: wrap;
+    padding: 32px 7.5vw;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.logo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 800;
+  margin-right: 1rem;
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+
+.spacer {
+  margin: 0 0;
+}
+
+main {
+  width: 100vw;
+  padding: 32px 7.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.live {
+  margin-top: 2rem;
+  margin-left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search {
+  padding: 1rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  background: var(--bg3);
+  border-radius: 4px;
+  padding-left: 1rem;
+}
+
+.ev-header {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ev-header h4 {
+  margin-top: 1rem;
+  flex-grow: 1;
+  margin-left: 0;
+  background: var(--bg3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: .9rem;
+  transition: all .3s ease-in-out;
+  text-align: center;
+}
+
+.ev-header a {
+  text-align: center;
+  margin-top: 1rem;
+  flex-grow: 1;
+  margin-left: 1rem;
+  color: #fff;
+  background: var(--accent2);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: .9rem;
+  transition: all .3s ease-in-out;
+}
+
+.event-row {
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-row h3 {
+  margin: 1rem 0;
+  text-align: center;
+  width: 100%;
+  background: var(--bg4);
+  padding: .6rem;
+  border-radius: 4px;
+}
+
+.event-row h4 {
+  flex-grow: 1;
+  background: var(--bg3);
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin: 1rem 0;
+  transition: all .3s ease-in-out;
+  text-align: center;
+}
+
+.placed {
+  width: 100vw;
+  transform: translate(-50%, 0);
+  left: 50%;
+  border-radius: 10px 10px 0 0;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(
+--bg3);
+  padding: 1.6rem;
+  box-shadow: 0 0 16px #00000050;
+}
+
+.placed-row {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: .6rem 0;
+}
+
+.placed-row input {
+  margin-bottom: 1.2rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background: var(--bg4);
+  color: #fff;
+  width: 100%;
+  border: none;
+  margin-left: 0;
+  text-align: right;
+}
+
+.bet-container-mobile {
+  width: 100%;
+  overflow-x: scroll;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.bet-header .bet-col, .bet-header .teams {
+  min-width: 180px !important;
+  width: 180px;
+}
+
+.bet-header, .bet-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: fit-content;
+  color: #fff;
+}
+
+.bet-container-mobile {
+  width: 100%;
+  overflow-x: scroll  !important;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+}
+
+.bet-col {
+  width: 220px;
+  height: 100%;
+}
+
+.bet-header .teams, .bet-row .teams {
+  min-width: 180px !important;
+  width: 300px;
+  flex-wrap: wrap;
+}
+
+.bet-header .bet-col, .bet-row .bet-col {
+  width: 180px;
+  min-width: 180px !important;
+}
+
+.ad-rows {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: var(--bg6);
+  border: 1px solid var(--bg4);
+  border-top: none;
+  box-shadow: 0 -4px 16px #00000060;
+}
+
+.history {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bg4);
+}
+
+.total-odds {
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-top: 1px solid var(--bg5);
+}
+
+.total-odds h4 {
+  text-align: center;
+  flex-grow: 1;
+  margin-left: auto;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+h1.lost, h1.won {
+  text-align: center;
+  width: 100%;
+  font-size: .9rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  margin-left: 0;
+}
+
+footer {
+  text-align: center !important;
+  flex-direction: column;
+  margin-top: 6rem;
+  padding: 32px 7.5vw;
+  background: var(--bg0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.login-form {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--accent1);
+  padding: 2rem;
+  width: 100%;
+  border-radius: 12px;
+  position: relative;
+}
+
+.login-form img {
+  display: none;
+  position: absolute;
+  top: -40%;
+  height: 140%;
+  right: 10%;
+  transition: all .3s ease-in-out;
+}
+
+.login-form h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: .2rem;
+}
+
+.login-form .input, .login-form .login-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.login-form h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 3rem;
+}
+}

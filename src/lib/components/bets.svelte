@@ -5,6 +5,7 @@
     import PlayerRow from "./player_row.svelte";
     import AdjustHeader from "./adjust_header.svelte";
     import AdjustRow from "./adjust_row.svelte";
+    import BetDropdown from "./bet_dropdown.svelte";
 </script>
 
 <h1>Game bets</h1>

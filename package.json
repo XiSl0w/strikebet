@@ -24,6 +24,7 @@
 		"@egjs/conveyer": "^1.7.1",
 		"@egjs/svelte-conveyer": "^1.7.1",
 		"date-picker-svelte": "^2.10.1",
+		"svelte-collapsible": "^0.3.0",
 		"svelte-select": "^5.8.3"
 	}
 }

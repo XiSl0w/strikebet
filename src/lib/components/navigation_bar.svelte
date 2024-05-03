@@ -10,7 +10,7 @@
         <span>STRIKE</span>BET
     </a>
     <a href="/" class="link">Sports</a>
-    <a href="/bets" class="link">Bets</a>
+    <a href="/extra_bets" class="link">Bets</a>
     <a href="/history" class="link">History</a>
     <span class="spacer"></span>
     {#if AuthActions.checkAuth()}
