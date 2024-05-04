@@ -1,5 +1,6 @@
 <div class="full-w">
     <h1 class="dash-t">Seller's clients (sellers and admins will view this)</h1>
+    <div class="dash-table-container">
 <div class="better-header">
     <h1>Player name</h1>
     <h1>Player e-mail</h1>
@@ -21,5 +22,6 @@
         <a href="#" class="suspends">Suspend user</a>
         <a href="#" class="adds">Add balance</a>
     </div>
+</div>
 </div>
 </div>

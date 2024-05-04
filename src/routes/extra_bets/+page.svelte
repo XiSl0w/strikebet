@@ -17,6 +17,11 @@
         <BetDropdown />
         <BetDropdown />
 
+        <div class="bets-loading">
+            <div class="loader"></div>
+            Our bets are loading...
+        </div>
+
         <PlacedBets
     league="Premier"
     team1="Manchester United"

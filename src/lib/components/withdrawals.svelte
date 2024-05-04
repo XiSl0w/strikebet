@@ -1,5 +1,6 @@
 <div class="full-w">
     <h1 class="dash-t">Withdrawal requests</h1>
+    <div class="dash-table-container">
     <div class="better-header">
         <h1>Player name</h1>
         <h1>Withdrawal amount</h1>
@@ -20,5 +21,6 @@
             <a href="#" class="deletes">Delete</a>
             <a href="#" class="edits">User info</a>
         </div>
+    </div>
     </div>
 </div>
