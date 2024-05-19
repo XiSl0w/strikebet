@@ -41,4 +41,26 @@
             AWAY <b>{odd_team2}</b>
         </div>
     </div>
+    <div class="more-bets">
+        <a href="#">More Bets</a>
+    </div>
 </div>
+
+<style>
+    .more-bets {
+        text-align: center;
+    }
+
+    .more-bets a {
+        background: var(--accent1);
+        padding: 12px;
+        width: 100%;
+        color: #fff;
+        margin-top: .6rem;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>

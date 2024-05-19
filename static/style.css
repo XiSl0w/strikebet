@@ -102,6 +102,12 @@ nav {
   opacity: 1;
 }
 
+.activelink {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 1;
+}
+
 .spacer {
   margin: 0 auto;
 }

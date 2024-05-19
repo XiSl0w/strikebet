@@ -16,7 +16,7 @@
   let data = {
     leagues: [],
     live_matches: [],
-    selected_league: 'All'
+    selected_league: "All",
   };
 
   $: data.selected_league = $BettingData.League;
@@ -42,38 +42,49 @@
         placeholder="search"
       />
     </div>
-    <League LeagueObject={{
-        name: "All",
-        logo: "/world.svg"
-    }} />
-    {#each leagues as league}
-      <League LeagueObject={league} />
-    {/each}
+    
+    {#if leagues.length !== 0}
+      <League
+        LeagueObject={{
+          name: "All",
+          logo: "/world.svg",
+        }}
+      />
+      {#each leagues as league}
+        <League LeagueObject={league} />
+      {/each}
+    {/if}
   </div>
 
   <div class="live">
     <h1>Live matches</h1>
     <div class="live-games" use:ref>
-    {#each live_matches as match}
+      {#if live_matches.length === 0}
+        <div class="bets-loading">
+          <div class="loader"></div>
+          Loading live matches...
+      </div>
+      {/if}
+      {#each live_matches as match}
         {#if match.full_time_odds.home !== null}
-            {#if match.league.name === data.selected_league || data.selected_league === "All"}
-                <LiveGame
-                    league="{match.league.name}"
-                    game_period="{match.fixture.status.long}"
-                    game_mins="{match.fixture.status.elapsed}"
-                    team1="{match.teams.home.name}"
-                    team1_img="{match.teams.home.logo}"
-                    odd_team1="{match.full_time_odds?.home ?? 'N/A'}"
-                    score1="{match.goals.home}"
-                    team2="{match.teams.away.name}"
-                    team2_img="{match.teams.away.logo}"
-                    odd_team2="{match.full_time_odds?.away ?? 'N/A'}"
-                    score2="{match.goals.away}"
-                    odd_draw="{match.full_time_odds?.draw ?? 'N/A'}"
-                />
-            {/if}
+          {#if match.league.name === data.selected_league || data.selected_league === "All"}
+            <LiveGame
+              league={match.league.name}
+              game_period={match.fixture.status.long}
+              game_mins={match.fixture.status.elapsed}
+              team1={match.teams.home.name}
+              team1_img={match.teams.home.logo}
+              odd_team1={match.full_time_odds?.home ?? "N/A"}
+              score1={match.goals.home}
+              team2={match.teams.away.name}
+              team2_img={match.teams.away.logo}
+              odd_team2={match.full_time_odds?.away ?? "N/A"}
+              score2={match.goals.away}
+              odd_draw={match.full_time_odds?.draw ?? "N/A"}
+            />
+          {/if}
         {/if}
-    {/each}
+      {/each}
     </div>
 
     <Upcoming />
