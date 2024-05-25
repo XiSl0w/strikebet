@@ -21,7 +21,7 @@
       class:activelink={currentRoute === "account"}
       ><i class="fa-solid fa-user"></i>{$userDetails.Username ? `${$userDetails.Username} $${$userDetails.Balance}` : 0}</a
     >
-    <a href="/logout" class="logout" on:click={AuthActions.clearToken}
+    <a href="/logout" class="logout" on:click={() => AuthActions.clearToken()}
       ><i class="fa-solid fa-right-to-bracket"></i>Logout</a
     >
   {:else}

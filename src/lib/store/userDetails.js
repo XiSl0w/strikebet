@@ -15,6 +15,7 @@ function createUserDetails() {
   });
 
   async function UpdateDetails() {
+    await new Promise(resolve => setTimeout(resolve, 1000));
     const setDetails = (data) => {
       update(details => ({ ...details, ...data }));
     };

@@ -609,10 +609,6 @@ h1:not(:first-of-type) {
   font-weight: 500;
 }
 
-.event-row h2:last-of-type {
-  text-align: right;
-}
-
 .event-row h2 span {
   color: var(--bg5);
   font-weight: 300;

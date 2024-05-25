@@ -2,7 +2,7 @@
     import Filters from "$lib/components/filters.svelte";
     import Bets from "$lib/components/bets.svelte";
     import BetDropdown from "$lib/components/bet_dropdown.svelte";
-    import PlacedBets from "$lib/components/placed_bets.svelte";
+    import PlacedBets from "$lib/components/cart.svelte";
 </script>
 
 <main>

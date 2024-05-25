@@ -11,6 +11,7 @@
     export let odd_team2 = 'odd2';
     export let game_mins = "mins";
     export let game_period = "game_half"
+    export let fixture_id = "fixture_id"
 </script>
 
 <div class="live-game">
@@ -42,7 +43,7 @@
         </div>
     </div>
     <div class="more-bets">
-        <a href="#">More Bets</a>
+        <a href="/extra_bets/{fixture_id}">More Bets</a>
     </div>
 </div>
 
