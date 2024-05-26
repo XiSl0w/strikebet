@@ -1832,6 +1832,43 @@ button.icon.clear-select {
 }
 
 @media only screen and (max-width:777px){
+
+  details {
+    color: #fff;
+    position: fixed;
+    height: fit-content;
+    left: auto !important;
+    right: 0%;
+    top: 5% !important;
+    width: fit-content;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+    background: var(--accent1);
+    transition: all .3s ease-in-out;
+}
+
+footer {
+  z-index: 0;
+  text-align: center !important;
+  flex-direction: column;
+  margin-top: 6rem;
+  padding: 32px 7.5vw;
+  background: var(--bg0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.f-link {
+  color: var(--bg4);
+  opacity: 1 !important;
+  transition: all .3s ease-in-out;
+  margin-bottom: .2rem;
+}
+
   nav {
     flex-wrap: wrap;
     padding: 32px 7.5vw;
