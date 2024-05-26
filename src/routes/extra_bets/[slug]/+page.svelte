@@ -27,13 +27,13 @@
         if (response.ok) {
             const res = await response.json();
             const match = res.matches[0];
-            const status = match.betting_status;
-            // if (status.stopped || status.blocked || status.finished) {
-            //     loading = false;
-            //     const cause = status.stopped ? "stopped" : status.blocked ? "blocked" : "finished";
-            //     Error = `Betting is ${cause} for this match.`;
-            //     return;
-            // }
+            const status = match?.betting_status;
+            if (status && status.stopped || status.blocked || status.finished) {
+                loading = false;
+                const cause = status.stopped ? "stopped" : status.blocked ? "blocked" : "finished";
+                Error = `Betting is ${cause} for this match.`;
+                return;
+            }
             MatchName = match.teams.home.name + " vs. " + match.teams.away.name;
             match.betting_odds.forEach(bet => {
                 bet = {

@@ -10,20 +10,20 @@
   $: currentPage = $page.url.pathname;
   $: mainRoute = currentPage.split("/")[1];
 
-  // onMount(async () => {
-  //   if (!AuthActions.checkAuth()) {
-  //     if (currentPage !== '/login') {
-  //       window.location.href = '/login';
-  //     }
-  //   }
-  //   const success = await userDetails.UpdateDetails();
-  //   if (!success) {
-  //     AuthActions.clearToken();
-  //     if (currentPage !== '/login') {
-  //       window.location.href = '/login';
-  //     }
-  //   }
-  // });
+  onMount(async () => {
+    if (!AuthActions.checkAuth()) {
+      if (currentPage !== '/login') {
+        window.location.href = '/login';
+      }
+    }
+    const success = await userDetails.UpdateDetails();
+    if (!success) {
+      AuthActions.clearToken();
+      if (currentPage !== '/login') {
+        window.location.href = '/login';
+      }
+    }
+  });
 </script>
 
 <body>

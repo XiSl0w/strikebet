@@ -1,33 +1,46 @@
 <script>
-  export let team1 = "Team 1";
-  export let team2 = "Team 2";
-  export let action = "win";
-  export let league = "League";
-  export let odd = "1.5";
-  export let player = "Player";
-  export let action_player = "score";
-  export let value = "100";
+  import { onDestroy } from 'svelte';
+  import { store as cart, actions } from '$lib/store/cart.js';
+  
+  let cartItems;
+
+  const unsubscribe = cart.subscribe(value => {
+    cartItems = value.items;
+  });
+
+  onDestroy(unsubscribe);
+
+  function handlePlacedAmountChange(itemId, event) {
+    const amount = event.target.value;
+    if (amount === '') {
+      actions.updatePlacedAmount(itemId, 0);
+      return;
+    }
+    if (isNaN(amount)) {
+      return;
+    }
+    actions.updatePlacedAmount(itemId, parseFloat(amount));
+  }
 </script>
 
 <div class="placed">
-  <div class="placed-row">
-    <p>
-      {team1} to {action}<br />
-      <span>Against {team2}</span><b>{league}</b>
-    </p>
-    <h3>{odd}</h3>
-    <input type="text" placeholder="Bet value" />
-  </div>
-  <div class="placed-row">
-    <p>
-      {player} to {action_player}<br />
-      <b>{league}</b>
-    </p>
-    <h3>{odd}</h3>
-    <input type="text" placeholder="Bet value" />
-  </div>
-  <a href="#" class="place"
-    >Place bet
-    <span>{value}</span>
+  {#each cartItems as item}
+    <div class="placed-row">
+      <p>
+        {item.match.team1} to {item.match.action}<br />
+        <span>Against {item.match.team2}</span> <b>{item.match.league}</b>
+      </p>
+      <h3>{item.odd}</h3>
+      <input 
+        type="text" 
+        placeholder="Bet value" 
+        value={item.placed_amount} 
+        on:input={(event) => handlePlacedAmountChange(item.id, event)} 
+      />
+    </div>
+  {/each}
+
+  <a href="#" class="place">
+    Place Bet<span>Total: {$cart.placed_amount || 0}</span>
   </a>
 </div>

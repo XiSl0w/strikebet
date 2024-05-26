@@ -434,6 +434,47 @@ footer .logo {
   font-size: .75rem;
 }
 
+.upcoming-indicator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: .2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 6.5%;
+  background: var(--accent2); /* Use var(--accent2) for upcoming */
+  color: #fff;
+  padding: .3rem .6rem .3rem .3rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: .75rem;
+}
+
+.pulse {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: pulse-animation 1.5s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .time {
   gap: .4rem;
   align-items: center;
