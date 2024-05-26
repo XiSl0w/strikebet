@@ -11,8 +11,8 @@
     export let fixture_id = "fixture_id"
 </script>
 
-<div class="live-game">
-    <span class="upcoming-indicator"><div class="pulse"></div>UPCOMING</span>
+<div class="live-game upcoming-game">
+    <span class="upcoming-indicator"><div class="pulse"><i class="fa-solid fa-calendar-days"></i></div>UPCOMING</span>
     <div class="crests">
         <div class="crest">
             <img src="{team1_img}">
@@ -25,7 +25,7 @@
     <h3 class="time">
         <b>{game_mins}</b>
     </h3>
-    <h3 class="league">{team1}  vs {team2}<br>{league}</h3>
+    <h3 class="league"><b>{team1}</b>  vs <b>{team2}</b><br>{league}</h3>
     <div class="team"></div>
     <div class="odds">
         <div class="odd">

@@ -443,19 +443,20 @@ footer .logo {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  top: 6.5%;
-  background: var(--accent2); /* Use var(--accent2) for upcoming */
+  top: 7.5%;
+  background: var(--accent2);
   color: #fff;
-  padding: .3rem .6rem .3rem .3rem;
+  padding: .4rem .6rem;
   border-radius: 4px;
   font-weight: 600;
   font-size: .75rem;
 }
 
 .pulse {
+  margin-bottom: .08rem;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: #fff;
+  font-size: .65rem;
   border-radius: 50%;
   animation: pulse-animation 1.5s infinite;
 }
@@ -2546,4 +2547,25 @@ details:hover {
 
 .place:hover {
   box-shadow:  0 0 16px var(--accent1);
+}
+
+.live-game.upcoming-game {
+  padding-top: 3.8rem;
+}
+
+.upcoming-game .time b {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.upcoming-game .league {
+  margin-bottom: 0;
+  text-align: center;
+  font-weight: 400;
+  margin-top: .8rem;
+}
+
+.upcoming-game .league b {
+  font-weight: 600;
+  color: #fff;
 }

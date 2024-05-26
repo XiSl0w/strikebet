@@ -20,7 +20,7 @@
 
 <div class="filters">
     <div class="search">
-        <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="search">
+        <i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search...">
     </div>
     {#each leagues as league}
         <League LeagueObject={league} />
