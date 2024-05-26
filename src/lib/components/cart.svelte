@@ -51,7 +51,7 @@
       />
     </div>
   {/each}
-
+  <h5>Placing a total of 5 bets with the odd of <b>12.02</b></h5>
   <a href="#" class="place">
     Place Bet<span>Total: {$cart.placed_amount || 0}</span>
   </a>
