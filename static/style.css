@@ -815,6 +815,15 @@ h1:not(:first-of-type) {
   border-radius: 2px;
 }
 
+.placed-row .delete {
+  background: var(--red1);
+  padding: 6px 12px;
+  border-radius: 2px;
+  color: #fff;
+  margin-left: 1rem;
+  transition: all .3s ease-in-out;
+}
+
 .placed a {
   background: var(--accent1);
   padding: 12px;
@@ -1149,6 +1158,24 @@ main:has(.title100) {
   font-size: .9rem;
 }
 
+.pending {
+  background: var(--bg0);
+  padding: .4rem .6rem;
+  border-radius: 4px;
+  height: fit-content;
+  color: #fff;
+  font-size: .9rem;
+}
+
+.cancelled {
+  background: var(--bg5);
+  padding: .4rem .6rem;
+  border-radius: 4px;
+  height: fit-content;
+  color: #fff;
+  font-size: .9rem;
+}
+
 .sum {
   background: var(--bg3);
   padding: .4rem .6rem;
@@ -1159,11 +1186,11 @@ main:has(.title100) {
   font-weight: 600;
 }
 
-.won i, .lost i {
+.won i, .lost i, .pending i, .cancelled i {
   margin-right: 12px;
 }
 
-h1.lost, h1.won {
+h1.lost, h1.won, h1.pending, h1.cancelled {
   font-size: .9rem;
   margin-bottom: 0;
   margin-top: 0;
@@ -1174,6 +1201,12 @@ h1.lost, h1.won {
   margin-left: auto;
   margin-right: 1rem;
   color: #fff;
+  background: var(--bg4);
+  padding: .4rem 1rem;
+  border-radius: 4px;
+  font-size: .9rem;
+  color: #fff;
+  font-weight: 300;
 }
 
 .total-odds h2 {
@@ -1196,7 +1229,7 @@ h1.lost, h1.won {
   border-top: 1px solid var(--bg4);
 }
 
-.history .won, .history .lost {
+.history .won, .history .lost, .history .pending, .history .cancelled {
   margin: 0 !important;
 }
 
@@ -2091,7 +2124,7 @@ main {
   color: #fff;
 }
 
-h1.lost, h1.won {
+h1.lost, h1.won, h1.pending, h1.cancelled {
   text-align: center;
   width: 100%;
   font-size: .9rem;

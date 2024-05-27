@@ -8,10 +8,9 @@
     export let text = '';
   
     onMount(() => {
-      // Automatically hide the toast after 3 seconds
       const timer = setTimeout(() => {
         removeToast(id);
-      }, 3000);
+      }, 5000);
   
       return () => clearTimeout(timer);
     });
@@ -33,7 +32,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       max-width: 300px;
       z-index: 1000;
-      animation: slideIn 0.5s, fadeOut 0.5s 2.5s;
+      animation: slideIn 0.5s, fadeOut 0.5s 4.5s;
     }
   
     .success {

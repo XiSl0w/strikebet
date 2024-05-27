@@ -1,5 +1,9 @@
-export const load = ({ params }) => {
+export const load = ({ params, url }) => {
+    const fixtureId = params.slug;
+    const upcoming = url.searchParams.get('upcoming') === 'true';
+
     return {
-        fixture_id: params.slug
+        fixture_id: fixtureId,
+        upcoming: upcoming
     }
 }

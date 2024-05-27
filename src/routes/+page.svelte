@@ -136,49 +136,38 @@
             score2={match.goals.away}
             odd_draw={match.full_time_odds?.draw ?? "N/A"}
             fixture_id={match.fixture.id}
+            bet_id={match.full_time_odds?.id}
           />
         {/if}
       {/each}
     </div>
 
-      <h1>Upcoming matches</h1>
-      <div class="live-games" use:ref>
-        {#if loading_upcoming}
-          <div class="bets-loading">
-            <div class="loader"></div>
-            Loading upcoming matches...
-          </div>
-        {:else if display_upcoming.length == 0}
-          <div class="bets-loading">No upcoming matches available</div>
-        {/if}
-        {#each display_upcoming as match}
-          <!-- <EventMatch
-          league="Premier"
-          match_time="17:00 PM"
-          team1="Chelsea"
-          team1_min="CHE"
-          odd_team1="1.03"
-          score1="0"
-          team2="Manchester United"
-          team2_min="MCU"
-          odd_team2="3.97"
-          score2="0"
-          odd_draw="2.56"
-        /> -->
-          <Upcoming
-            league={match.league.name}
-            game_mins={formatDateTime(match.fixture.date)}
-            team1={match.teams.home.name}
-            team1_img={match.teams.home.logo}
-            odd_team1={match.full_time_odds?.home ?? "N/A"}
-            team2={match.teams.away.name}
-            team2_img={match.teams.away.logo}
-            odd_team2={match.full_time_odds?.away ?? "N/A"}
-            odd_draw={match.full_time_odds?.draw ?? "N/A"}
-            fixture_id={match.fixture.id}
-          />
-        {/each}
-      </div>
+    <h1>Upcoming matches</h1>
+    <div class="live-games" use:ref>
+      {#if loading_upcoming}
+        <div class="bets-loading">
+          <div class="loader"></div>
+          Loading upcoming matches...
+        </div>
+      {:else if display_upcoming.length == 0}
+        <div class="bets-loading">No upcoming matches available</div>
+      {/if}
+      {#each display_upcoming as match}
+        <Upcoming
+          league={match.league.name}
+          game_mins={formatDateTime(match.fixture.date)}
+          team1={match.teams.home.name}
+          team1_img={match.teams.home.logo}
+          odd_team1={match.full_time_odds?.home ?? "N/A"}
+          team2={match.teams.away.name}
+          team2_img={match.teams.away.logo}
+          odd_team2={match.full_time_odds?.away ?? "N/A"}
+          odd_draw={match.full_time_odds?.draw ?? "N/A"}
+          fixture_id={match.fixture.id}
+          bet_id={match.full_time_odds?.id}
+        />
+      {/each}
+    </div>
   </div>
 
   <PlacedBets />
